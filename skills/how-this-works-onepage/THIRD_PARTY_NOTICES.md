@@ -1,0 +1,9 @@
+# Answer Me with HTML
+
+Upstream: https://github.com/QingYunA/answer-me-with-html
+
+Pinned source commit: `7acea24024923eaae8647f5988e826062456dc86` (CLI version 0.5.5).
+
+`vendor/answer-me-with-html/am.mjs` is an unmodified copy of the upstream bundled `skills/answer-me-with-html/scripts/am.mjs`. Its MIT license and copyright notice are retained in [LICENSE](vendor/answer-me-with-html/LICENSE). The visual-format reference adapts syntax documentation from that revision.
+
+HTW's rendering entry point and source-checking scripts are separate from the upstream bundle. No upstream update or installation is required at render time. This integration does not import the upstream always-on policy, global settings workflow, video tools, or automatic publishing behavior into the HTW workflow.

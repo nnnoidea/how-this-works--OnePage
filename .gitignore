@@ -15,3 +15,22 @@ __pycache__/
 node_modules/
 .cache/
 website/
+
+# Local current design and migration recovery
+/SEMANTICS.md
+/semantics/
+/.local-history/
+
+# Publish only the current OnePage Skill; retain other work locally.
+/skills/*
+!/skills/how-this-works-onepage/
+/design/
+/learning-ui/
+/scripts/
+/tests/
+/docs/monthly/
+/docs/research/
+/docs/images/*
+!/docs/images/dify-comparison/
+/docs/demos/*
+!/docs/demos/dify-comparison/

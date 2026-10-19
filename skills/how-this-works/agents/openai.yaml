@@ -1,4 +1,0 @@
-interface:
-  display_name: "How This Works"
-  short_description: "Understand projects through scenarios, architecture and evidence"
-  default_prompt: "Use $how-this-works to explain this project's purpose, main capabilities, and architecture through representative scenarios and source evidence, writing in the language of my request."
