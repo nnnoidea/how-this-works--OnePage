@@ -4,7 +4,7 @@
 
 **简体中文** · [English](README.en.md)
 
-给 Agent 一个代码仓库、Skill 或文档项目，How This Works（HTW）将它解析成一页有图解、有源码依据的讲解：**项目有什么用、主要能力如何配合、哪些前提与限制影响使用。** 为第一次接触项目的开发者建立整体认识，并交付可打开的 HTML 与可编辑的 Markdown 草稿。
+给 Agent 一个代码仓库、Skill 或文档项目，How This Works（HTW）将它解析成一页有图解、有源码依据的讲解：**项目是什么、适合哪些需求、与外部如何分工、内部架构和关键机制怎样协作。** 为第一次接触项目的开发者建立整体认识，并交付可打开的 HTML 与可编辑的 Markdown 草稿。
 
 ## 实际效果：一页理解 Dify
 
@@ -16,16 +16,16 @@
 
 ## 与直接使用 Answer Skill 对比
 
-同一份 Dify 源码、同一任务、同样的 **GPT-6.1 Sol / low**。这次直接使用 Answer Skill 的结果过于侧重 Workflow 内部执行与排障细节，未能形成 OnePage 对整个项目的理解；HTW 则连起了主要能力、运行方式与采用条件。
+同一份 Dify 源码，同样使用 **GPT-6.1 Sol / low**。直接使用 Answer Skill 的结果更侧重执行细节；HTW 用 OnePage 串起项目用途、内外架构、关键机制与实际场景。
 
 [查看 Answer 原网页](https://nnnoidea.github.io/how-this-works--OnePage/demos/dify-comparison/answer/) · [Answer HTML 文件](docs/demos/dify-comparison/answer/index.html)
 
-| 作者组 | 未缓存输入 token | 缓存输入 token | 输出 token | 总 token |
-| --- | ---: | ---: | ---: | ---: |
-| Answer | 46,822 | 548,608 | 4,992 | 600,422 |
-| HTW | 28,613 | 543,360 | 5,110 | 577,083 |
+| 作者组 | 未缓存输入 token | 缓存输入 token | 输出 token | 总 token | 生成耗时 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Answer | 46,822 | 548,608 | 4,992 | 600,422 | 116.1 秒 |
+| HTW | 59,840 | 842,752 | 6,989 | 909,581 | 187.9 秒 |
 
-两组均约 116 秒，正文和图解保留首次交付。总 token 包含缓存，不等于费用；不含外部评审开销。这是单次对比，不代表普遍效果或成本优势。[实验方法与完整结果](docs/demos/dify-comparison/README.md)
+实测生成数据，总 token 包含缓存。[查看数据](docs/demos/dify-comparison/README.md)
 
 ## 使用
 

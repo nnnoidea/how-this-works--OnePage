@@ -4,7 +4,7 @@
 
 [简体中文](README.md) · **English**
 
-Give your Agent a code repository, a Skill, or a documentation project. How This Works (HTW) turns it into one illustrated, source-backed explanation: **what it does, how its main capabilities cooperate, and which prerequisites and limits affect its use.** It builds an overall understanding for developers encountering the project for the first time, delivered as an HTML page and an editable Markdown draft.
+Give your Agent a code repository, a Skill, or a documentation project. How This Works (HTW) turns it into one illustrated, source-backed explanation: **what it is, which needs it suits, how it works with external systems, and how its architecture and key mechanisms cooperate.** It builds an overall understanding for developers encountering the project for the first time, delivered as an HTML page and an editable Markdown draft.
 
 ## See the result: Dify on one page
 
@@ -16,16 +16,16 @@ Give your Agent a code repository, a Skill, or a documentation project. How This
 
 ## Compared with using the Answer Skill directly
 
-Same Dify source, same task, **GPT-6.1 Sol / low** in both conditions. In this run, the direct Answer Skill output focused too heavily on Workflow execution and troubleshooting details to provide a OnePage understanding of the whole project. HTW instead connected the main capabilities, operation and adoption conditions.
+Same Dify source, **GPT-6.1 Sol / low**. The direct Answer Skill result focuses more on execution details; HTW connects project uses, external relationships, internal architecture, key mechanisms and a concrete scenario in OnePage.
 
 [Open the original Answer page](https://nnnoidea.github.io/how-this-works--OnePage/demos/dify-comparison/answer/) · [Answer HTML file](docs/demos/dify-comparison/answer/index.html)
 
-| Author condition | Uncached input tokens | Cached input tokens | Output tokens | Total tokens |
-| --- | ---: | ---: | ---: | ---: |
-| Answer | 46,822 | 548,608 | 4,992 | 600,422 |
-| HTW | 28,613 | 543,360 | 5,110 | 577,083 |
+| Author condition | Uncached input tokens | Cached input tokens | Output tokens | Total tokens | Generation time |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Answer | 46,822 | 548,608 | 4,992 | 600,422 | 116.1 s |
+| HTW | 59,840 | 842,752 | 6,989 | 909,581 | 187.9 s |
 
-Both took about 116 seconds; the explanations and diagrams retain their first deliveries. Totals include cache, are not prices, and exclude external review. This single comparison does not establish general quality or cost superiority. [Method and full findings](docs/demos/dify-comparison/README.md)
+Measured generation usage; total tokens include cached input. [View the data](docs/demos/dify-comparison/README.md)
 
 ## Use it
 

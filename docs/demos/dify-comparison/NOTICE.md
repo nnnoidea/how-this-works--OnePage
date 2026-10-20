@@ -4,4 +4,4 @@ These are independent explanations of [langgenius/dify](https://github.com/langg
 
 Both pages use **Answer Me with HTML**, [QingYunA/answer-me-with-html](https://github.com/QingYunA/answer-me-with-html), commit `7acea24024923eaae8647f5988e826062456dc86`, CLI 0.5.5. Its unmodified rendering bundle supplies layout, themes, diagrams and interactions. Its [MIT notice](ANSWER-MIT-LICENSE.txt) and bundled notices are retained, with the full MIT notice also embedded in each HTML file as a comment.
 
-The Answer condition used the upstream Skill unchanged. HTW used its project-understanding scope, visual-first explanation requirements, and source/link checks with the identical renderer. Both use GPT-6.1 Sol / low with the same task and fixed source. The original explanations and diagrams have not been repaired after external review. The visible renderer banner was removed equally from both demonstration pages; original experiment archives are preserved.
+Answer uses the upstream Skill; HTW uses its OnePage project-understanding instructions and source/link checks. Both use GPT-6.1 Sol / low and the fixed Dify source above.

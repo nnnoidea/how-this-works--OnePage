@@ -1,21 +1,34 @@
 ---
 name: how-this-works-onepage
-description: Explain a code, Skill, or documentation project in one source-backed visual page for a developer encountering it for the first time. Connect its purpose, main capabilities, cooperation and adoption conditions using an integrated renderer and source-validation tools.
+description: "Understand and explain projects, repositories, codebases, libraries, frameworks, Skills, and documentation through a source-backed visual OnePage. Use when the user asks to explain a project, understand a repository, learn how it works, get oriented in unfamiliar source code, map its architecture, understand design choices or key mechanisms, or judge what it can do and whether it fits a need. Applies to GitHub links and local projects, including requests for project walkthroughs, architecture overviews, and visual explanations. Activate for project-learning intent even when the user does not mention HTML, a webpage, visualization, or OnePage. Also use when explicitly asked for HTW or How This Works. Keep isolated bug fixes and implementation tasks outside this scope unless project understanding is requested."
 ---
 
 # How This Works — OnePage
 
 Produce a source-backed OnePage explanation of the requested project, in the user's language. The Agent handles research; this package supplies presentation and validation. No separate Answer Me with HTML installation is needed.
 
-The result should let a reader unfamiliar with the project understand its purpose, main capabilities, how its parts cooperate, and the relevant design choices and limits. Identify the studied project and source version in the explanation. These are delivery outcomes, not prescribed research steps or a fixed page outline.
+The result should let a reader unfamiliar with the project understand what it is, its purpose and boundaries, main capabilities, how its parts cooperate, and the relevant design choices and limits. Identify the studied project and source version in the explanation.
 
-Use **one-page understanding as the default** for a general project explanation. Bound the learning objective to purpose, main capabilities, their cooperation in a representative use, and choices or conditions that materially affect suitability. Internal implementation catalogues, exhaustive options, and peripheral branches are outside that objective unless they change a central conclusion. This bounds the research depth, not just the length of the final prose. Any source remains available for resolving consequential uncertainty; do not impose a file whitelist or omit a major capability. Deliver one readable overview page, without a fixed word or panel quota. Readers can use the draft and sources to ask an Agent follow-up questions; the first page need not explain every implementation detail.
+## Plan a connected reading path
+
+Before drafting, plan the page's questions together along this progression: **definition → uses and capability scope → external relationships → internal architecture → selected mechanisms → a representative collaboration scenario**. Let each answer prepare the reader for the next:
+
+1. **Define the project.** Briefly name its concrete form and main responsibility, establishing what kind of thing the reader is looking at.
+2. **Show its uses and capability scope as a whole.** Connect complete user needs to supported outcomes, adoption conditions, and work the user must still supply. Choose complementary needs that reveal different sides of suitability or delivery, with perspectives and number determined by the material. Distinguish built-in capabilities, integrations, and user configuration. This locates the project within its category; a feature list or examples that merely change the input domain do not establish that scope.
+3. **Show external relationships.** Use the [project boundary template](references/visual-format.md#project-boundary-template): one explicit box named for the studied project, its outward-facing responsibilities inside, and users and collaborating systems outside. Label the exchanges across that box. These responsibility boundaries complement the capability scope; expand internal architecture in the next part.
+4. **Explain internal architecture.** Open the project boundary to show its main parts, their responsibilities, and their connections. Give the reader an overall structure in which to place the subsequent details, organized by how the system works.
+5. **Develop selected mechanisms where useful.** Expand mechanisms that support a main use, explain an important design choice, or clarify behavior that affects results. Explain their purpose, operation, and relevant conditions. Give architecture and mechanisms enough space to make the design understandable; their depth follows the project.
+6. **Bring the parts together in a representative scenario.** Trace an input or task through the architecture and mechanisms already introduced to its result. Connect the external exchanges to the internal handoffs, showing how the parts cooperate. Use this walkthrough to consolidate the explanation rather than substitute for the architecture.
+
+Use this as a reading progression, with sections merged or expanded to suit the material. Research remains flexible, and planning can stay internal. Keep each section focused on a coherent question; do not bundle unrelated leftover topics. Ground scope and limits in the sources rather than inventing exclusions or uniqueness claims.
+
+Use **one-page understanding as the default** for a general project explanation. Focus research on the project's scope, architecture, meaningful mechanisms, their cooperation, and conditions that affect suitability. Read further wherever uncertainty could change a central conclusion. Deliver one readable page with enough explanation for that objective; exhaustive implementation catalogues and peripheral options can remain for follow-up. Readers can use the draft and sources to ask an Agent further questions. Let the material set the depth and length, without a file whitelist or fixed word or panel quota.
 
 ## Create or extend the study
 
-Write the explanation as editable Markdown with source citations. Use [Visual format](references/visual-format.md) for the bundled components; let the material determine the structure. Keep the draft alongside its HTML. Do not cut substantive content merely to fit a panel count. Existing drafts can be clarified or locally revised without rebuilding a research database.
+Write the planned explanation as editable Markdown with source citations. Use [Visual format](references/visual-format.md) for the bundled components. Keep the draft alongside its HTML. Existing drafts can be clarified or locally revised.
 
-**Explain each substantive point visually by default, including in onepage studies.** Show the objects and relationships, participants and exchanges, or inputs and changes that make the point understandable. Use prose to explain the visual and supply conditions, evidence, and limits. Clear prose alone is not a reason to omit a visual. Several related points can share a visual; there is no diagram count or type quota. A single overview flow does not cover other mechanisms merely mentioned in prose. Boxes of paragraphs and before/after text tables are not substitutes for showing the relationships or changes. Keep a point primarily textual only when it genuinely cannot be usefully visualized, and briefly explain that exception in the delivery notes. Do not drop a material point to avoid visualizing it or invent relationships, order, quantities, or outcomes to fill a diagram. Label illustrative examples as such.
+**Explain each substantive point visually by default, including in onepage studies.** Show the objects and relationships, participants and exchanges, or inputs and changes that make the point understandable. Use prose to explain the visual and supply conditions, evidence, and limits. Related points can share a visual when it explains their relationships; choose the number and types from the material. Give mechanisms their own visual explanation where the overview leaves them unexplained. Boxes of paragraphs and before/after text tables are not substitutes for showing relationships or changes. Keep a point primarily textual only when visualization would not help, and briefly explain the exception in the delivery notes. Preserve material points and ground every visual relationship in evidence; do not invent behavior to fill a diagram. Label illustrative examples as such.
 
 Render each draft with Node.js 20+:
 
@@ -24,6 +37,19 @@ node SKILL_DIR/scripts/render.mjs DRAFT.md OUTPUT.html --source-dir SOURCE_CHECK
 ```
 
 Replace `SKILL_DIR` with this folder's absolute path. `--source-dir` selects the local files for embedded code; omit it when no code is embedded or the working directory is already correct. It does not verify the checkout's revision. The bundled renderer needs no dependency installation, browser launch, or update check. Reuse output paths when revising. Read rendering diagnostics; layout and syntax are handled by the renderer, not hand-written HTML/CSS/SVG.
+
+## Write for quick understanding
+
+Adapt Answer Me with HTML's STE100-inspired writing principles for project explanations; this is not full ASD-STE100 conformance.
+
+- Name sections with concrete objects and familiar actions so readers can anticipate the content. Use a question or a statement that matches what the section explains; keep internal planning terminology out of reader-facing titles. Lead with the answer or concrete question, then develop it.
+- Keep sentences that add understanding. Remove preambles, promotional claims, research narration, and closing summaries that add no information.
+- Give each sentence one main point. Prefer a named actor and a direct verb: “The runner calls the model,” not “Model invocation is performed.” Keep conditions close to the behavior they qualify.
+- Use familiar words. Explain necessary technical terms on first use, then use the same name in prose and diagrams. Replace vague abstractions with who does what to which object.
+- Make paragraphs develop one idea. Split overloaded sentences while preserving causal links, prerequisites, and limits.
+- Let prose explain what the reader should understand from the diagram, including why a relationship matters, rather than recounting each node and arrow.
+- State uncertainty precisely: separate observed implementation, author claims, illustrative examples, and unverified behavior. Put shared study limitations together rather than repeating them in each section.
+- Keep diagram labels short and concrete, with essential conditions next to the relevant relationship. Treat renderer writing warnings as revision hints, not a score to optimize or a reason to delete meaning. Adapt to the output language rather than enforcing English word limits on Chinese.
 
 ## Validate the result
 

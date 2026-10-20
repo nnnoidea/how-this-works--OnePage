@@ -57,6 +57,33 @@ node SKILL_DIR/vendor/answer-me-with-html/am.mjs help sequence
 node SKILL_DIR/vendor/answer-me-with-html/am.mjs help format
 ```
 
+## Project boundary template
+
+Use this structure for the external-relationships view. Keep the boundary convention stable while adapting the participants and exchanges to the evidence.
+
+- Draw one `group` box named for the studied project. Put only its main outward-facing responsibilities inside. Keep users, host applications, and separately supplied services outside.
+- Connect each participant to the relevant responsibility. Label arrows with the request, material, action, or result being exchanged. Show requests and returns separately when both matter.
+- Use solid arrows for the main exchanges. Use dashed arrows for optional integrations and label their condition. Keep enough participants to explain the actual boundary; omit unsupported roles.
+- Treat the box as a responsibility boundary. Briefly clarify ownership or deployment distinctions when needed: a service can run on the same machine and still be an external dependency. For libraries and Skills, exchanges can be function calls, files, instructions, or artifacts rather than network messages.
+- Let the following architecture view expand the responsibilities inside the box. The boundary view should remain readable as a project and its surroundings.
+
+The example below demonstrates syntax, not a mandatory set of components. Replace the names and labels with project-specific terms in the reader's language:
+
+````markdown
+```flow LR
+Caller -> Request handling: task and input
+Request handling -> Work coordination: accepted task
+Work coordination -> External service: service request
+External service -> Work coordination: service result
+Work coordination -> Caller: completed output
+Maintainer -> Configuration: settings and resources
+Configuration -> Work coordination: configured behavior
+group Project name: Request handling, Work coordination, Configuration
+```
+````
+
+Inspect the rendered box and labels at normal reading size. Automatic layout determines positions; the invariant is visible enclosure and correctly directed exchanges, not exact left/right coordinates. If the view is crowded, combine related responsibilities or separate an optional interaction while retaining the same named project boundary.
+
 ## Code and diagnostics
 
 Existing code can be embedded by the renderer with an empty fenced block such as `python src=src/worker.py lines=18-30 hl=22`. Paths resolve within `render.mjs --source-dir DIRECTORY`, or the working directory if omitted. This reads local files, not the commit named in a citation. Select the intended checkout; Git citation validation is a separate check and does not certify embedded snippets. For illustrative code, use a normal fence with `title="Example · sketch"`.
