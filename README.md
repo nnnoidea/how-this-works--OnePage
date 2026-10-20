@@ -35,4 +35,4 @@
 
 ## 致谢与来源
 
-HTW 基于 [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html) 修改。页面布局、主题、图表组件和交互来自 Answer；HTW 针对 OnePage 理解项目调整研究目标与图解要求，并增加源码引用和页面链接校验。内置渲染器保持原样，保留上游版权声明、MIT 许可证和[第三方声明](skills/how-this-works-onepage/THIRD_PARTY_NOTICES.md)。
+HTW 基于 [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html) 修改。页面布局、主题、图表组件和交互来自 Answer；HTW 针对 OnePage 理解项目调整研究目标与图解要求，并增加源码引用和页面链接校验。内置渲染器保持原样，保留上游版权声明和 [MIT 许可证](skills/how-this-works-onepage/vendor/answer-me-with-html/LICENSE)。

@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { finishPage } from './page_presentation.mjs';
 
+// Bundled Answer renderer: QingYunA/answer-me-with-html @ 7acea24024923eaae8647f5988e826062456dc86 (0.5.5).
 const args = process.argv.slice(2);
 const usage = 'Usage: node render.mjs DRAFT.md OUTPUT.html [--source-dir DIRECTORY]';
 if (args.length === 1 && args[0] === '--help') {

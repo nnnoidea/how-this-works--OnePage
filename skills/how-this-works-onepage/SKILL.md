@@ -47,4 +47,4 @@ Check whether sources support the explanations and diagrams and whether the resu
 
 Review each substantive explanation point against the rendered visuals: can the reader see the relationship or change being explained, and does the visual help them follow it? Check the reasons for any text-only points. Do not substitute prose polish, diagram counts, or component variety for this review; a diagram that merely repeats labels or implies unsupported behavior does not meet the requirement.
 
-Deliver the page link, editable draft, and material limitations. The renderer's origin and license are recorded in [Third-party notices](THIRD_PARTY_NOTICES.md).
+Deliver the page link, editable draft, and material limitations.

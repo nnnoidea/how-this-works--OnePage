@@ -1,6 +1,6 @@
 # Visual format
 
-Adapted from Answer Me with HTML; see [attribution](../THIRD_PARTY_NOTICES.md). This is the output syntax reference, not a research procedure.
+Adapted from [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html), under its [MIT license](../vendor/answer-me-with-html/LICENSE). This is the output syntax reference, not a research procedure.
 
 ```markdown
 ---

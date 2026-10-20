@@ -35,4 +35,4 @@ Ask your Agent to install the [Skill folder](skills/how-this-works-onepage), the
 
 ## Credits
 
-HTW is adapted from [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html). Answer supplies the page layout, themes, diagram components and interactions. HTW adapts the research objective and visual requirements for OnePage project understanding, and adds source-reference and page-link checks. The bundled renderer is unmodified; its copyright notice, MIT license and [third-party notice](skills/how-this-works-onepage/THIRD_PARTY_NOTICES.md) are retained.
+HTW is adapted from [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html). Answer supplies the page layout, themes, diagram components and interactions. HTW adapts the research objective and visual requirements for OnePage project understanding, and adds source-reference and page-link checks. The bundled renderer is unmodified; its copyright notice and [MIT license](skills/how-this-works-onepage/vendor/answer-me-with-html/LICENSE) are retained.
