@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import { finishPage } from './page_presentation.mjs';
 
 const args = process.argv.slice(2);
 const usage = 'Usage: node render.mjs DRAFT.md OUTPUT.html [--source-dir DIRECTORY]';
@@ -26,6 +27,7 @@ if (args.length === 1 && args[0] === '--help') {
       { cwd: sourceDir, stdio: 'inherit', env: { ...process.env, AM_HOME: home, AM_NO_UPDATE_CHECK: '1' } });
     if (result.error) console.error(result.error.message);
     process.exitCode = result.status ?? 1;
+    if (result.status === 0) finishPage(resolve(args[1]));
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

@@ -28,6 +28,10 @@ try {
   for (const page of [overview, details]) {
     assert.match(page, /id="panel-A"/);
     assert.match(page, /id="am-source"/);
+    assert.doesNotMatch(page, /<p class="am-colophon">/);
+    assert.match(page, /<!-- Answer Me with HTML — retained license/);
+    assert.match(page, /Copyright \(c\) 2026 Answer me with HTML contributors/);
+    assert.match(page, /Permission is hereby granted, free of charge/);
   }
   assert.match(details, /SOURCE_CODE_MARKER/);
   mkdirSync(join(root, 'snapshot'));

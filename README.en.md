@@ -25,7 +25,7 @@ Same Dify source, same task, **GPT-6.1 Sol / low** in both conditions. In this r
 | Answer | 46,822 | 548,608 | 4,992 | 600,422 |
 | HTW | 28,613 | 543,360 | 5,110 | 577,083 |
 
-Both took about 116 seconds; the pages retain their first deliveries. Totals include cache, are not prices, and exclude external review. This single comparison does not establish general quality or cost superiority. [Method and full findings](docs/demos/dify-comparison/README.md)
+Both took about 116 seconds; the explanations and diagrams retain their first deliveries. Totals include cache, are not prices, and exclude external review. This single comparison does not establish general quality or cost superiority. [Method and full findings](docs/demos/dify-comparison/README.md)
 
 ## Use it
 
@@ -35,4 +35,4 @@ Ask your Agent to install the [Skill folder](skills/how-this-works-onepage), the
 
 ## Credits
 
-HTW is adapted from [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html). Answer supplies the page layout, themes, diagram components and interactions. HTW adapts the research objective and visual requirements for OnePage project understanding, and adds source-reference and page-link checks. The bundled renderer is unmodified; its on-page attribution, MIT license and [third-party notice](skills/how-this-works-onepage/THIRD_PARTY_NOTICES.md) are retained.
+HTW is adapted from [Answer Me with HTML](https://github.com/QingYunA/answer-me-with-html). Answer supplies the page layout, themes, diagram components and interactions. HTW adapts the research objective and visual requirements for OnePage project understanding, and adds source-reference and page-link checks. The bundled renderer is unmodified; its copyright notice, MIT license and [third-party notice](skills/how-this-works-onepage/THIRD_PARTY_NOTICES.md) are retained.

@@ -16,7 +16,7 @@ HTW connects Dify's purpose, main capabilities, a representative RAG use, execut
 
 Reader preferences were mixed: X→Y preferred HTW for a first introduction; Y→X preferred Answer for predicting Workflow behavior. Both recognized HTW's broader adoption guidance and Answer's runtime depth. Source review found checked factual accuracy broadly tied, without major errors. This does not establish universal superiority or a stable win rate.
 
-Both produced four flow components. Answer's streaming branch is not visually connected back to execution; HTW's publishing and runtime chains lack an explicit bridge. Answer's execution diagram is tall; HTW's wide diagrams have small labels that benefit from enlargement. Original pages retain these limitations.
+Both produced four flow components. Answer's streaming branch is not visually connected back to execution; HTW's publishing and runtime chains lack an explicit bridge. Answer's execution diagram is tall; HTW's wide diagrams have small labels that benefit from enlargement. The explanations and diagrams retain these limitations. Both displayed pages now omit the visible renderer banner and retain the full MIT notice in an HTML comment; this presentation-only change is excluded from the measured author run.
 
 ## Measured author usage
 
@@ -29,7 +29,7 @@ Counts come from actual per-response usage, checked against cumulative turn/sess
 
 ## Screenshots and original pages
 
-The main README displays only the [HTW full-page capture](../../images/dify-comparison/htw-full.jpg), 1265×2465, with an HTML link for Answer. The [Answer capture](../../images/dify-comparison/answer-full.jpg), 1265×3023, remains available here as experiment material. Both are real browser captures at the same width, with original themes and natural page heights; no cropping, stitching or redrawing. Both studies were authored in Chinese.
+The main README displays only the [HTW full-page capture](../../images/dify-comparison/htw-full.jpg), 1265×2444, with an HTML link for Answer. The [Answer capture](../../images/dify-comparison/answer-full.jpg), 1265×3002, remains available here as experiment material. Both are real browser captures at the same width, with original themes and natural page heights, after removing the visible renderer banner; no cropping, stitching or redrawing. Both studies were authored in Chinese.
 
 GitHub's file viewer shows HTML source. Download the HTML to open locally, or use these GitHub Pages links, published from **main / docs**:
 
